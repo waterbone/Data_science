@@ -110,19 +110,19 @@ elif analysis_type == "Clustering":
                 st.write("Predictions:")
                 st.write(predictions)
                 
-# Time Series Analysis
-elif analysis_type == "Time Series":
-    st.header("Time Series Analysis with auto_arima")
-    st.write("Provide input features for time series prediction:")
+# # Time Series Analysis
+# elif analysis_type == "Time Series":
+#     st.header("Time Series Analysis with auto_arima")
+#     st.write("Provide input features for time series prediction:")
     
-    if input_method == "Single Input":
-        st.write("Single input for time series is not typically supported.")
-    elif input_method == "Batch Input":
-        uploaded_file = st.file_uploader("Choose a CSV file", type = "csv")
-        if uploaded_file is not None:
-            data = pd.read_csv(uploaded_file, parse_dates = ['date'], index_col = 'date')
-            st.write(data)
-            if st.button('Predict Time Series'):
-                predictions = arima_model.predict(n_periods = len(data))
-                st.write("Predictions:")
-                st.wrie(predictions)
+#     if input_method == "Single Input":
+#         st.write("Single input for time series is not typically supported.")
+#     elif input_method == "Batch Input":
+#         uploaded_file = st.file_uploader("Choose a CSV file", type = "csv")
+#         if uploaded_file is not None:
+#             data = pd.read_csv(uploaded_file, parse_dates = ['date'], index_col = 'date')
+#             st.write(data)
+#             if st.button('Predict Time Series'):
+#                 predictions = arima_model.predict(n_periods = len(data))
+#                 st.write("Predictions:")
+#                 st.wrie(predictions)
