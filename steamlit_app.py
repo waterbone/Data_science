@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
-from pmdarima.arima import ARIMA
+# from pmdarima.arima import ARIMA
 
 # Load Models
 clf_model = joblib.load('clf_model.pkl')
